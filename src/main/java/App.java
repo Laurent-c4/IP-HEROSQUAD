@@ -16,7 +16,7 @@ import static spark.Spark.*;
 public class App {
     public static void main(String[] args) {
         ProcessBuilder process = new ProcessBuilder();
-        Integer port;
+        int port;
 
         // This tells our app that if Heroku sets a port for us, we need to use that port.
         // Otherwise, if they do not, continue using port 4567.
