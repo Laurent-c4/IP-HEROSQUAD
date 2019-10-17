@@ -89,7 +89,7 @@ public class App {
             Map<String, Object> model = new HashMap<>();
             int idOfSquadToFind = Integer.parseInt(req.params("id"));
             Squad foundSquad = squadDao.findById(idOfSquadToFind);
-            model.put("squads", foundSquad);
+            model.put("squad", foundSquad);
             List<Hero> allHeroesBySquad = squadDao.getAllHeroesBySquad(idOfSquadToFind);
             model.put("heroes", allHeroesBySquad);
             model.put("squads", squadDao.getAll());

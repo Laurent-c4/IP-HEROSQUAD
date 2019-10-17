@@ -3,7 +3,6 @@
     {{#if editHero}}
         <h1>Edit Hero Details</h1>
         <form action="/heroes/{{hero.id}}" method="post">
-            <br>
             <label for="name">Edit hero's name</label>
             <input id="name" name="name" type="text" value="{{hero.name}}">
             <br>
@@ -31,24 +30,29 @@
         <form action="/heroes" method="post">
             {{#if squads}}
                 <label for="name">Hero Name</label>
+                <br>
                 <input id="name" name="name" type="text">
-
+                <br>
                 <label for="age">Hero Age</label>
+                <br>
                 <input id="age" name="age" type="text">
-
+                <br>
                 <label for="specialPower">Hero Special Power</label>
+                <br>
                 <input id="specialPower" name="specialPower" type="text">
-
+                <br>
                 <label for="weakness">Hero Weakness</label>
+                <br>
                 <input id="weakness" name="weakness" type="text">
-
+                <br>
                 <label for="squadId">Select The Squad for the Hero:</label>
+                <br>
                 <select id="squadId" name="squadId">
                     {{#each squads}}
                         <option value="{{id}}">{{name}}</option>
                     {{/each}}
                 </select>
-
+                <br>
                 <p>Add a new Squad for the hero?<a href="/squads/new">Click Here</a></p>
             {{else}}
                 <h3> Every hero must belong to a squad. <a href="/squads/new">Add one here.</a></h3>
