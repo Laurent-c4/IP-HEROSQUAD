@@ -2,10 +2,12 @@
     <h1>SQUAD: {{squad.name}}</h1>
     <p>Squad Members:</p>
         {{#each heroes}}
-                <p><a href="/squads/{{squad.id}}/heroes/{{id}}">{{name}}</a></p>
+                <a class="link font-weight-bold" href="/squads/{{squad.id}}/heroes/{{id}}">{{name}}</a><br>
         {{/each}}
-    <a href="/squads/{{squad.id}}/edit">Edit this squad</a><br>
-    <a href="/squads/{{squad.id}}/delete">DELETE this squad</a>
+
+    <br><br>
+    <a class="btn btn-outline-primary" href="/squads/{{squad.id}}/edit">Edit this squad</a>
+    <a class="btn btn-outline-danger" href="/squads/{{squad.id}}/delete">DELETE this squad</a>
 {{/partial}}
 
 {{> layout.hbs}}

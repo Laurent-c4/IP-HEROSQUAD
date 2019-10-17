@@ -1,14 +1,14 @@
 {{#partial "content"}}
 
-    <p>Name: {{ hero.name }}</p>
-    <p>Age: {{ hero.age }}</p>
-    <p>Special Power: {{ hero.specialPower }}</p>
-    <p>Weakness: {{ hero.weakness }}</p>
-    <p>Squad: {{ squad.name }}</p>
+    <p class="font-weight-bold">Name: {{ hero.name }}</p>
+    <p class="font-weight-bold">Age: {{ hero.age }}</p>
+    <p class="font-weight-bold">Special Power: {{ hero.specialPower }}</p>
+    <p class="font-weight-bold">Weakness: {{ hero.weakness }}</p>
+    <p class="font-weight-bold">Squad: {{ squad.name }}</p>
 
     <p>
-        <a href="/heroes/{{hero.id}}/edit">Edit hero details</a><br>
-        <a href="/squads/{{hero.categoryId}}/heroes/{{hero.id}}/delete">DELETE HERO</a>
+        <a class="btn btn-outline-primary" href="/heroes/{{hero.id}}/edit">Edit hero details</a>
+        <a class="btn btn-outline-danger" href="/squads/{{hero.categoryId}}/heroes/{{hero.id}}/delete">DELETE HERO</a>
     </p>
 
 {{/partial}}
