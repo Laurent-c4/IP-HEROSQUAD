@@ -17,6 +17,8 @@ Postgresql
 ## Website overview
 ![Hero Squad](/src/main/resources/public/images/Website_Screenshot.png)
 
+Go to https://quiet-mountain-16804.herokuapp.com/ for a live demo
+
 ## Support and contact details
 Contact +254792599994 for any questions concerning the app. Feel free to give your feedback too.
 ### License
