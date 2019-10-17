@@ -6,7 +6,7 @@ import java.time.LocalDateTime;
 
 import static org.junit.Assert.*;
 
-public class TaskTest {
+public class HeroTest {
     @Test
     public void NewHeroObjectGetsCorrectlyCreated_true() throws Exception {
         Hero hero = setupNewHero();
@@ -23,11 +23,11 @@ public class TaskTest {
     @Test
     public void getCreatedAtInstantiatesWithCurrentTimeToday() throws Exception {
         Hero hero = setupNewHero();
-        assertEquals(LocalDateTime.now().getDayOfWeek(), task.getCreatedAt().getDayOfWeek());
+        assertEquals(LocalDateTime.now().getDayOfWeek(), hero.getCreatedAt().getDayOfWeek());
     }
 
     //helper methods
     public Hero setupNewHero(){
-        return new Hero("SubZero", 1);
+        return new Hero("SubZero", 20, "Freeze", "Flu", 2);
     }
 }

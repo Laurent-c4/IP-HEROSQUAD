@@ -7,11 +7,17 @@ public class Hero {
     private String name;
     private int id;
     private int squadId;
+    private int age;
+    private String specialPower;
+    private String weakness;
     private LocalDateTime createdAt;
 
-    public Hero(String name,int squadId){
+    public Hero(String name,int age, String specialPower,String weakness, int squadId){
         this.name=name;
         this.squadId=squadId;
+        this.age=age;
+        this.specialPower=specialPower;
+        this.weakness=weakness;
         this.createdAt = LocalDateTime.now();
     }
 
@@ -45,6 +51,30 @@ public class Hero {
 
     public void setCreatedAt(LocalDateTime createdAt) {
         this.createdAt = createdAt;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public String getSpecialPower() {
+        return specialPower;
+    }
+
+    public void setSpecialPower(String specialPower) {
+        this.specialPower = specialPower;
+    }
+
+    public String getWeakness() {
+        return weakness;
+    }
+
+    public void setWeakness(String weakness) {
+        this.weakness = weakness;
     }
 
     @Override

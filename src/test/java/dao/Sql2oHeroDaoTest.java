@@ -65,7 +65,7 @@ public class Sql2oHeroDaoTest {
         Hero hero = setupNewHero();
         heroDao.add(hero);
 
-        heroDao.update(hero.getId(),"SubZero", 1);
+        heroDao.update(hero.getId(),"SubZero", 20, "Freeze", "Flu", 2);
         Hero updatedTask = heroDao.findById(hero.getId());
         assertNotEquals(initialName, updatedTask.getName());
     }
@@ -81,7 +81,7 @@ public class Sql2oHeroDaoTest {
     @Test
     public void clearAllClearsAll() throws Exception {
         Hero hero = setupNewHero();
-        Hero otherHero = new Hero("SubZero", 2);
+        Hero otherHero = new Hero("SubZero", 20, "Freeze", "Flu", 2);
         heroDao.add(hero);
         heroDao.add(otherHero);
         int daoSize = heroDao.getAll().size();
@@ -99,6 +99,6 @@ public class Sql2oHeroDaoTest {
 
     //define the following once and then call it as above in your tests.
     public Hero setupNewHero(){
-        return new Hero("SubZero", 1);
+        return new Hero("SubZero", 20, "Freeze", "Flu", 1);
     }
 }

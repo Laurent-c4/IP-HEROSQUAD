@@ -84,7 +84,7 @@ public class Sql2oSquadDaoTest {
         Squad squad = setupNewSquad();
         squadDao.add(squad);
         squadDao.deleteById(squad.getId());
-        assertEquals(0, categoryDao.getAll().size());
+        assertEquals(0, squadDao.getAll().size());
     }
 
     @Test
@@ -103,9 +103,9 @@ public class Sql2oSquadDaoTest {
         Squad squad = setupNewSquad();
         squadDao.add(squad);
         int squadId = squad.getId();
-        Hero newHero = new Hero("SubZero",squadId);
-        Hero otherHero = new Hero("Scorpion", squadId);
-        Hero thirdHero = new Hero("Jax", squadId);
+        Hero newHero = new Hero("SubZero", 20, "Freeze", "Flu", squadId);
+        Hero otherHero = new Hero("Scorpion", 20, "Fire", "Hothead", squadId);
+        Hero thirdHero = new Hero("Jax", 20, "Smash", "Unstable", squadId);
         heroDao.add(newHero);
         heroDao.add(otherHero);
         assertEquals(2, squadDao.getAllHeroesBySquad(squadId).size());
