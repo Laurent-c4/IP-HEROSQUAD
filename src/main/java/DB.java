@@ -14,7 +14,7 @@ public class DB {
             if (System.getenv("DATABASE_URL") == null) {
                 dbUri = new URI("postgres://localhost:5432/herosquad");
             } else {
-                dbUri = new URI(System.getenv("DATABASE_URL"));
+                dbUri = new URI(System.getenv("HEROKU_POSTGRESQL_PUCE_URL:"));
             }
             int port = dbUri.getPort();
             String host = dbUri.getHost();
