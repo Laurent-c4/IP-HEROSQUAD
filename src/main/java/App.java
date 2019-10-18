@@ -30,10 +30,10 @@ public class App {
         port(port);
 
         staticFileLocation("/public");
-//        String connectionString = "jdbc:postgresql://localhost:5432/herosquad";
-//        Sql2o sql2o = new Sql2o(connectionString, "laurent", "laurent");
-        String connectionString = "jdbc:postgresql://ec2-54-243-239-199.compute-1.amazonaws.com:5432/d14k0s1k56igc5";
-        Sql2o sql2o = new Sql2o(connectionString, "cvttpmkuvbieau", "53d1c41b574efde72dfad8503ac6e463ec803d3a42df6dba3a27742cedec628a");
+        String connectionString = "jdbc:postgresql://localhost:5432/herosquad";
+        Sql2o sql2o = new Sql2o(connectionString, "laurent", "laurent");
+//        String connectionString = "jdbc:postgresql://ec2-54-243-239-199.compute-1.amazonaws.com:5432/d14k0s1k56igc5";
+//        Sql2o sql2o = new Sql2o(connectionString, "cvttpmkuvbieau", "53d1c41b574efde72dfad8503ac6e463ec803d3a42df6dba3a27742cedec628a");
         Sql2oHeroDao heroDao = new Sql2oHeroDao(sql2o);
         Sql2oSquadDao squadDao = new Sql2oSquadDao(sql2o);
 
